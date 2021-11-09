@@ -1,6 +1,7 @@
 package it.unibo.oop.lab.anonymous1;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import it.unibo.oop.lab.socialnetwork.SocialNetworkUser;
@@ -8,7 +9,7 @@ import it.unibo.oop.lab.socialnetwork.SocialNetworkUserImpl;
 import it.unibo.oop.lab.socialnetwork.User;
 
 /**
- * Instruction: define two comparators as anonymous classes in oder to sort a
+ * Instruction: define two comparators as anonymous classes in order to sort a
  * list of user in the appropriate way.
  * 
  * 1) Study carefully the test in order to understand it
@@ -75,6 +76,15 @@ public final class TestAnonymousComparator {
          * REFER TO LESSON 13-Advanced-Mechanisms.pdf, slide 41
          */
         // TODO
+        denzelUsers.sort(new Comparator<User>() {
+
+			@Override
+			public int compare(User o1, User o2) {
+				return Integer.compare(o1.getAge(), o2.getAge());
+			}
+        	
+        });
+        
         /*
          * expected Result
          */
@@ -106,6 +116,13 @@ public final class TestAnonymousComparator {
          * class Collections
          */
         // TODO
+        rossiUsers.sort(new Comparator<User>() {
+			@Override
+			public int compare(User o1, User o2) {
+				return Integer.compare(o2.getAge(), o1.getAge());
+			}
+        });
+        
         /*
          * expected Result
          */
