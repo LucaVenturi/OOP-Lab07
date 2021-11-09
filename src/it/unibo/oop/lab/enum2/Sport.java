@@ -42,7 +42,7 @@ public enum Sport {
 	TENNIS(Place.OUTDOOR, 1, "Tennis"),
 	BIKE(Place.OUTDOOR, 1, "Bike"),
 	F1(Place.OUTDOOR, 1, "Formula 1"),
-	MOTOGP(Place.INDOOR, 1, "Moto GP"),
+	MOTOGP(Place.OUTDOOR, 1, "Moto GP"),
 	SOCCER(Place.OUTDOOR, 11, "Soccer");
 
     /*
