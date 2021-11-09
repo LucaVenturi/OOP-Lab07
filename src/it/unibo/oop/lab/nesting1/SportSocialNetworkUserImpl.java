@@ -136,6 +136,10 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * Complete the definition of this static inner class defining a Sport along
      * with its bare name.
      */
+    /**
+     * Class that contains the Sports that are avaible for {@link SportSocialNetworkUserImpl}
+     *
+     */
     public static final class Sport {
         /*
          * TODO
@@ -145,6 +149,10 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
          */
     	private final String name;
     	
+    	/**
+    	 * @param name
+    	 * 		Sport's name.
+    	 */
     	public Sport(String name) {
     		this.name = name;
     	}
@@ -154,6 +162,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
 			return Objects.hash(name);
 		}
 
+		/**
+		 *	Two {@link SportSocialNetworkUserImpl} are equal if they share the exact same name.
+		 */
 		@Override
 		public boolean equals(final Object obj) {
 			if (this == obj)

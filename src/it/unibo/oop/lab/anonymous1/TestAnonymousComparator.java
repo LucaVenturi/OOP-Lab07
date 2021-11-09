@@ -78,6 +78,15 @@ public final class TestAnonymousComparator {
         // TODO
         denzelUsers.sort(new Comparator<User>() {
 
+        	/**
+        	 * Compares two Users to order them by age ascending order.
+        	 * @param o1
+        	 * 			First User
+        	 * @param o2
+        	 * 			Second User
+        	 * @return
+        	 * 			Integer.Compare between the ages
+        	 */
 			@Override
 			public int compare(User o1, User o2) {
 				return Integer.compare(o1.getAge(), o2.getAge());
@@ -117,6 +126,10 @@ public final class TestAnonymousComparator {
          */
         // TODO
         rossiUsers.sort(new Comparator<User>() {
+        	
+			/**
+			 *	Compares two User confronting their age
+			 */
 			@Override
 			public int compare(User o1, User o2) {
 				return Integer.compare(o2.getAge(), o1.getAge());
